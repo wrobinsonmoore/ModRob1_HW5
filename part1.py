@@ -6,17 +6,18 @@ np.set_printoptions(suppress=True)
 USER INPUTS
 """
 
-# For our custom pose
-t1 = np.pi/2
-t2 = -np.pi/2
+# Angles for my custom pose
+t1 = np.radians(90)
+t2 = np.radians(-90)
 t3 = 0
 t4 = 0
 t5 = 0
 t6 = 0
 
-# Define the robot properties
+# Define q
 theta= np.array([[t1],[t2],[t3],[t4],[t5],[t6]])
 
+# Define the a's
 a = np.array([
     [0, 0, 0],
     [0, 0, 284.8],
@@ -26,6 +27,7 @@ a = np.array([
     [0, 1, 0]
 ])
 
+# Define the Sw's
 rot = np.array([
     [0, 0, 1],
     [0, 1, 0],
@@ -35,6 +37,7 @@ rot = np.array([
     [0, 0, -1]
 ])
 
+# Define M in the robot's zero position
 M = np.array([
     [-1, 0, 0, 0],
     [0, -1, 0, 1],
@@ -42,6 +45,7 @@ M = np.array([
     [0, 0, 0, 1]
 ])
 
+# Define the type of joints the robot has
 jt = 'RRRRRR'
 
 
